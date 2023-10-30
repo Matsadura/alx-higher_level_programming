@@ -1,2 +1,2 @@
-#/bin/pyhton3
+#/bin/python3
 import this
