@@ -16,4 +16,3 @@ while alpha > 96:
     else:
         print("{:c}".format(alpha), end="")
     alpha -= 1
-print("")
