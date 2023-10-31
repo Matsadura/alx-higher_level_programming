@@ -2,5 +2,5 @@
 alph = 97
 
 while alph < 123:
-    print(f"{alph:c}", end="")
+    print("{:c}".format(alph), end="")
     alph += 1

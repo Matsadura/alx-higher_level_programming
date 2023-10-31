@@ -6,5 +6,5 @@ while alph < 123:
         alph += 1
         continue
     else:
-        print(f"{alph:c}", end="")
+        print("{:c}".format(alph), end="")
     alph += 1
