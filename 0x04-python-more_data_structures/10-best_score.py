@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary is None:
+    if a_dictionary is None or a_dictionary == {}:
         return None
-    comp = 0
+    comp = -90000
     comp_a = ""
-    for i in a_dictionary.items():
-        a, b = i
+    for a, b in a_dictionary.items():
         if comp < b:
             comp = b
             comp_a = a
