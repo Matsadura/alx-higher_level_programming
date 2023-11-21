@@ -12,8 +12,18 @@ class Square:
         """
             Instantiation with optional size and optional position
         """
-        self.__size = size
-        self.__position = position
+        if type(position) is not tuple or len(position) != 2 or not\
+                all(isinstance(i, int) and i >= 0 for i in position):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(size) is not int:
+            print("size must be an integer", end="")
+            raise TypeError
+        elif size < 0:
+            print("size must be >= 0", end="")
+            raise ValueError
+        else:
+            self.__size = size
+            self.__position = position
 
     @property
     def size(self):
@@ -51,9 +61,6 @@ class Square:
         if type(value) is not tuple or len(value) != 2 or not\
                 all(isinstance(i, int) and i > 0 for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
-        # if type(value) is not tuple or value[0] < 0 or value[1] < 0:
-            # print("position must be a tuple of 2 positive integers", end="")
-            raise TypeError
         else:
             self.__position = value
 
