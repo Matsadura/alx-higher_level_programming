@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """
+    This module is for the implementation of
+    getter and setter
 """
 
 
