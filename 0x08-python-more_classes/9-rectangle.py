@@ -141,5 +141,6 @@ class Rectangle:
             width == height == size
         """
         if size < 0:
-            raise ValueError
-        return cls(size, size)
+            print()
+        else:
+            return cls(size, size)
