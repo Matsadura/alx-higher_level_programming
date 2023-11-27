@@ -140,7 +140,4 @@ class Rectangle:
             return a new Rectangle instance with
             width == height == size
         """
-        if size < 0:
-            print()
-        else:
-            return cls(size, size)
+        return cls(size, size)
