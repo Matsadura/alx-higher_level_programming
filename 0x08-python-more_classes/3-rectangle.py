@@ -92,5 +92,6 @@ class Rectangle:
         for i in range(height):
             for j in range(width):
                 print("#", end="")
-            print('')
+            if i != height - 1:
+                print('')
         return ("")
