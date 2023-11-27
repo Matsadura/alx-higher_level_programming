@@ -87,6 +87,8 @@ class Rectangle:
         width = self.__width
         height = self.__height
 
+        if width == 0 pr height == 0:
+            return ("")
         for i in range(height):
             for j in range(width):
                 print("#", end="")
