@@ -12,7 +12,7 @@ class Square(Rectangle):
         """
             Instantiation with size
         """
-        super().integer_validator("size", size)
+        self.integer_validator("size", size)
         super().__init__(size, size)
         self__size = size
 
