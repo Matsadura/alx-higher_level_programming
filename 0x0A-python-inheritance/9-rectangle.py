@@ -13,9 +13,9 @@ class Rectangle(BaseGeometry):
         """
             Instantiation with width and height
         """
-        self.integer_validator("width", width)
+        super().integer_validator("width", width)
         self.__width = width
-        self.integer_validator("height", height)
+        super().integer_validator("height", height)
         self.__height = height
 
     def area(self):
@@ -28,4 +28,4 @@ class Rectangle(BaseGeometry):
         """
             returns a description
         """
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        return f"[{self.__class__.__name__}] {self.__width}/{self.__height}"
