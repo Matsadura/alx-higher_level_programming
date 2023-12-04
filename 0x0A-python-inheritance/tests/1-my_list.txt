@@ -11,3 +11,13 @@ True
 >>> my_list_emp = MyList()
 >>> my_list_emp.print_sorted()
 []
+
+
+>>> all_pos = MyList()
+>>> all_pos.append(0)
+>>> all_pos.append(1)
+>>> all_pos.append(2)
+>>> all_pos.print_sorted()
+[0, 1, 2]
+>>> print(all_pos)
+[0, 1, 2]
