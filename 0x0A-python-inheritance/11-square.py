@@ -12,18 +12,18 @@ class Square(Rectangle):
         """
             Instantiation with size
         """
-        self.integer_validator("size", size)
+        super().integer_validator("size", size)
         self__size = size
         super().__init__(size, size)
 
-    def area(self):
-        """
-            Returns the area of the square
-        """
-        return super().area()
+#    def area(self):
+#        """
+#            Returns the area of the square
+#        """
+#        return super().area()
 
-    def __str__(self):
-        """
-            Return description
-        """
-        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
+#    def __str__(self):
+#        """
+#            Return description
+#        """
+#        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
