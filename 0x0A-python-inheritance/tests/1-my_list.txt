@@ -1,0 +1,13 @@
+# Tests for 1-my_list.py
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> isinstance(my_list, MyList)
+True
+
+>>> issubclass(MyList, list)
+True
+
+>>> my_list_emp = MyList()
+>>> my_list_emp.print_sorted()
+[]
