@@ -21,3 +21,14 @@ True
 [0, 1, 2]
 >>> print(all_pos)
 [0, 1, 2]
+
+>>> pos_neg = MyList()
+>>> pos_neg.append(-2)
+>>> pos_neg.append(2)
+>>> pos_neg.append(0)
+>>> pos_neg.append(1)
+>>> pos_neg.append(-1)
+>>> pos_neg.print_sorted()
+[-2, -1, 0, 1, 2]
+>>> print(pos_neg)
+[-2, 2, 0, 1, -1]
