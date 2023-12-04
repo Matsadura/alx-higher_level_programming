@@ -15,4 +15,3 @@ def lookup(obj):
             said object
     """
     return dir(obj)
-
