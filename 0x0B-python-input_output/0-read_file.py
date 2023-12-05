@@ -9,7 +9,7 @@ def read_file(filename=""):
         Args:
             filename: The file to read
     """
-    with open(filename, encoding="UTF-8") as f:
+    with open(filename, encoding="utf-8") as f:
         a = f.read()
 
-    print(a)
+    print(a, end="")
