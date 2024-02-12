@@ -148,4 +148,4 @@ class Rectangle:
             A class method that returns a new Rectangle instance
             with width == height == size
         """
-        return cls(cls.size, cls.size)
+        return cls(size, size)
