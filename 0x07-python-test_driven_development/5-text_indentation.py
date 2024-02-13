@@ -27,5 +27,3 @@ def text_indentation(text):
             print(line.replace('\n', ''), end="")
             break
         print(line + "\n\n", end="")
-    # print(text, end="")
-   #  print(stripped_text,)
