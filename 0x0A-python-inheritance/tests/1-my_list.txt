@@ -40,3 +40,9 @@ TypeError: '<' not supported between instances of 'int' and 'NoneType'
 Traceback (most recent call last):
 	...
 TypeError: '<' not supported between instances of 'int' and 'str'
+
+>>> neg_list = MyList()
+>>> for elm in [1, 0, -1]:
+...	neg_list.append(elm)
+>>> neg_list.print_sorted()
+[-1, 0, 1]
