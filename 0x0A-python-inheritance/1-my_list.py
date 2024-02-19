@@ -13,6 +13,4 @@ class MyList(list):
             A function that prints the list
             but sorted (ascending sort)
         """
-        new_list = list(self)
-        new_list.sort()
-        print(new_list)
+        print(sorted(self))
