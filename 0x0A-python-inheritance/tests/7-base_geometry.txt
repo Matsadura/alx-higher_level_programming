@@ -9,6 +9,11 @@ Tests for the BaseGeometry class in the 7-base_geometry module
 
 =============================================================
 
+>>> type(bg) == BaseGeometry
+True
+
+=============================================================
+
 >>> bg.integer_validator("zidane", 5)
 
 =============================================================
