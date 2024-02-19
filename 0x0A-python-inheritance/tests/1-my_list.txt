@@ -18,3 +18,19 @@ Tests for the function print_sorted in the module 1-my_list
 >>> empty_list = MyList()
 >>> empty_list.print_sorted()
 []
+
+>>> none_list = MyList()
+>>> for elm in [None, 2, 1]:
+...	none_list.append(elm)
+>>> none_list.print_sorted()
+Traceback (most recent call last):
+	...
+TypeError: '<' not supported between instances of 'int' and 'NoneType'
+
+>>> str_list = MyList()
+>>> for elm in ["str", 2, 1]:
+...	str_list.append(elm)
+>>> str_list.print_sorted()
+Traceback (most recent call last):
+	...
+TypeError: '<' not supported between instances of 'int' and 'str'
