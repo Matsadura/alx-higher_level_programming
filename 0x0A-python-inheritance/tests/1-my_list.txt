@@ -12,7 +12,7 @@ Tests for the function print_sorted in the module 1-my_list
 >>> isinstance(new_list, MyList)
 True
 
->>> issubclass(MyList, new_list)
+>>> issubclass(MyList, list)
 True
 
 >>> rev_list = MyList()
