@@ -56,3 +56,6 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 
 >>> neg_list.print_sorted()
 [-1, 0, 1]
+
+>>> print(neg_list)
+[1, 0, -1]
