@@ -6,6 +6,10 @@ Tests for the function print_sorted in the module 1-my_list
 >>> new_list = MyList()
 >>> for elm in [1, 2, 3]:
 ...	new_list.append(elm)
+
+>>> print(new_list)
+[1, 2, 3]
+
 >>> new_list.print_sorted()
 [1, 2, 3]
 
@@ -18,6 +22,9 @@ True
 >>> rev_list = MyList()
 >>> for elm in [3, 2, 1]:
 ...	rev_list.append(elm)
+>>> print(rev_list)
+[3, 2, 1]
+
 >>> rev_list.print_sorted()
 [1, 2, 3]
 
@@ -44,5 +51,8 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 >>> neg_list = MyList()
 >>> for elm in [1, 0, -1]:
 ...	neg_list.append(elm)
+>>> print(neg_list)
+[1, 0, -1]
+
 >>> neg_list.print_sorted()
 [-1, 0, 1]
