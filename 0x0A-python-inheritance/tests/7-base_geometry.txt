@@ -18,6 +18,8 @@ True
 
 >>> bg.integer_validator("", 1)
 
+>>> bg.integer_validator(None, 2)
+
 
 =============================================================
 
