@@ -8,47 +8,61 @@ Tests for the BaseGeometry class in the 7-base_geometry module
 >>> bg = BaseGeometry()
 
 =============================================================
+
 >>> bg.integer_validator("zidane", 5)
 
 =============================================================
+
 >>> bg.integer_validator("zidane", "zaoui")
 Traceback (most recent call last):
 	...
 TypeError: zidane must be an integer
 
 =============================================================
+
+>>> bg.area()
+Traceback (most recent call last):
+	...
+Exception: area() is not implemented
+
+=============================================================
+
 >>> bg.integer_validator("zidane", 0)
 Traceback (most recent call last):
 	...
 ValueError: zidane must be greater than 0
 
 =============================================================
+
 >>> bg.integer_validator("zidane", -1)
 Traceback (most recent call last):
 	...
 ValueError: zidane must be greater than 0
 
 =============================================================
+
 >>> bg.integer_validator("zidane", None)
 Traceback (most recent call last):
 	...
 TypeError: zidane must be an integer
 
 =============================================================
+
 >>> bg.integer_validator()
 Traceback (most recent call last):
 	...
 TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 =============================================================
+
 >>> bg.integer_validator("zidane")
 Traceback (most recent call last):
 	...
 TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
 =============================================================
+
 >>> bg.integer_validator("zidane", 15, 20)
 Traceback (most recent call last):
 	...
 TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
-
