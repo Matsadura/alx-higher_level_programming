@@ -9,6 +9,12 @@ Tests for the function print_sorted in the module 1-my_list
 >>> new_list.print_sorted()
 [1, 2, 3]
 
+>>> isinstance(new_list, MyList)
+True
+
+>>> issubclass(MyList, new_list)
+True
+
 >>> rev_list = MyList()
 >>> for elm in [3, 2, 1]:
 ...	rev_list.append(elm)
