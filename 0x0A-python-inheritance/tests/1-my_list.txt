@@ -34,3 +34,16 @@ TypeError: '<' not supported between instances of 'int' and 'NoneType'
 Traceback (most recent call last):
 	...
 TypeError: '<' not supported between instances of 'int' and 'str'
+
+>>> super_none = MyList()
+>>> super_none.append(None)
+>>> super_none.append(None)
+>>> super_none.print_sorted()
+Traceback (most recent call last):
+	...
+TypeError: '<' not supported between instances of 'NoneType' and 'NoneType'
+
+>>> solo_none = MyList()
+>>> solo_none.append(None)
+>>> solo_none.print_sorted()
+[None]
