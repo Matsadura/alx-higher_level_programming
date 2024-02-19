@@ -47,3 +47,11 @@ TypeError: '<' not supported between instances of 'NoneType' and 'NoneType'
 >>> solo_none.append(None)
 >>> solo_none.print_sorted()
 [None]
+
+>>> str_list = MyList()
+>>> for elm in ["str", 2, 1]:
+...	str_list.append(elm)
+>>> str_list.print_sorted('a')
+Traceback (most recent call last):
+	...
+TypeError: MyList.print_sorted() takes 1 positional argument but 2 were given
