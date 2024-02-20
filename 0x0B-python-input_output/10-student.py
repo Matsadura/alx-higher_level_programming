@@ -23,11 +23,10 @@ class Student():
         """
         A method that retrives a dictionary repr of a Student
         """
-        rep = vars(self)
-        key_list = []
-        if type(attrs) is list and [type(elm) is str for elm in attrs]:
-            for k, v in rep.items():
-                if k in attrs:
-                    key_list.append((k, v))
-            return dict(key_list)
-        return rep
+        rep = {}
+        if attrs:
+            for attr in attrs:
+                if hasattr(self, attr):
+                    rep[attr] = getattr(self, attr)
+            return rep
+        return vars(self)
