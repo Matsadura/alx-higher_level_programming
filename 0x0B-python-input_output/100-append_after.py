@@ -14,12 +14,12 @@ def append_after(filename="", search_string="", new_string=""):
             search_string (str): The string to look for
             new_string (str): The line to append
     """
-    with open(filename, 'a+', encoding='utf-8') as f:
-        f.seek(0)
+    with open(filename, 'r', encoding='utf-8') as f:
         lines = f.readlines()
+
+    with open(filename, 'w', encoding='utf-8') as f:
         for line in lines:
             if search_string in line:
-                f.write(line)
-                f.write(new_string)
+                f.write(line + new_string)
             else:
                 f.write(line)
