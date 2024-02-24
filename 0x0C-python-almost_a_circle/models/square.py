@@ -3,6 +3,7 @@
     A module that contains the Square class
 """
 from models.rectangle import Rectangle
+import json
 
 
 class Square(Rectangle):
@@ -19,6 +20,15 @@ class Square(Rectangle):
         return f"[Square] ({self.id}) {self.x}/{self.y} - \
 {self.width}"
 
+    @property
+    def size(self):
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.height = value
+
     def update(self, *args, **kwargs):
         attrs = ['id', 'size', 'x', 'y']
         if args:
@@ -30,8 +40,9 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         attrs = {}
-        names = ['x', 'y', 'id', 'size']
-        values = [self.x, self.y, self.id, self.width]
+        names = ['id', 'x', 'size', 'y']
+        values = [self.id, self.x, self.y, self.size]
         for name, value in zip(names, values):
             attrs[name] = value
         return attrs
+

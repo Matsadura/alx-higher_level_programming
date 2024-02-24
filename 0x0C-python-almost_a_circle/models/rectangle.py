@@ -17,6 +17,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
+        self.__width = width
 
         if type(height) is not int:
             raise TypeError("height must be an integer")
@@ -36,7 +37,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = y
 
-        self.__width = width
         super().__init__(id)
 
     @property
@@ -113,8 +113,8 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         attrs = {}
-        names = ['x', 'y', 'id', 'width', 'height']
-        values = [self.x, self.y, self.id, self.width, self.height]
+        names = ['x', 'y', 'id', 'height', 'width']
+        values = [self.x, self.y, self.id, self.height, self.width]
         for name, value in zip(names, values):
             attrs[name] = value
         return attrs
