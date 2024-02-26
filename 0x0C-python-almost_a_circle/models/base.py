@@ -8,6 +8,7 @@ import os
 import turtle
 import random
 
+
 class Base:
     """
         The base class for all other classes
@@ -40,9 +41,9 @@ class Base:
                 The JSON string representattion of list_dictionaries
                 or [] if list_dictionaries is None or Empty
         """
-        if list_dictionaries:
-            return json.dumps(list_dictionaries)
-        return "[]"
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -51,7 +52,7 @@ class Base:
             of list_obj to a file
 
             Args:
-                list_objs: A list of instances who inherits of Base
+                list_objs (list): A list of instances who inherits of Base
         """
         list_to_print = []
         if list_objs:
@@ -128,8 +129,9 @@ class Base:
             writer = csv.DictWriter(f, fieldnames=names)
 
             writer.writeheader()
-            for line in list_of_dict:
-                writer.writerow(line)
+            if list_objs:
+                for line in list_of_dict:
+                    writer.writerow(line)
 
     @classmethod
     def load_from_file_csv(cls):
@@ -164,7 +166,7 @@ class Base:
                 list_squares (list): The list of squares to draw
         """
         list_colors = ['red', 'blue', 'green', 'purple', 'brown', 'yellow',
-                'orange', 'cyan', 'violet']
+                       'orange', 'cyan', 'violet']
         drawing = turtle.Turtle()
         for rect in list_rectangle:
             drawing.color(random.choice(list_colors))
