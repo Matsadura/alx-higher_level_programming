@@ -1,3 +1,4 @@
+-- Lists all genres from the databas and displays the number of shows linked to each
 SELECT tv_genre.name AS genre,
 COUNT(tv_genre.name) AS number_of_shows
 FROM tv_genres
