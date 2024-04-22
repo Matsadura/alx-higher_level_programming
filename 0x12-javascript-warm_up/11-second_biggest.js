@@ -4,7 +4,7 @@ const { argv } = require('node:process');
 let firstLarge = 0;
 let secondLarge = 0;
 
-if (argv.length === 2 || argv.length === 3) {
+if (argv.length < 4) {
   console.log('0');
 } else {
   let counter;
