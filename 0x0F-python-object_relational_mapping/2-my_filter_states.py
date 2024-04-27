@@ -17,14 +17,14 @@ if __name__ == "__main__":
 
     cur = conn.cursor()
 
-    query = "SELECT * FROM states ORDER BY id;"
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id;".format(
+            state_name)
     cur.execute(query)
 
     query_result = cur.fetchall()
 
     for row in query_result:
-        if row[1] == state_name:
-            print(row)
+        print(row)
 
     cur.close()
     conn.close()
