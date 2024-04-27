@@ -27,11 +27,8 @@ if __name__ == "__main__":
 
     cur.execute(query)
 
-    query_result = cur.fetchall()
-    for i in range(len(query_result) - 1):
-        print(query_result[i][0], end=", ")
-    if len(query_result) > 0:
-        print(query_result[len(query_result) - 1][0])
+    query_result = [row[0] for row in cur.fetchall()]
+    print(", ".join(query_result))
 
     cur.close()
     conn.close()
