@@ -9,6 +9,8 @@ if __name__ == "__main__":
     db_name = argv[3]
     state_name = argv[4]
 
+    if state_name == "'":
+        pass
     conn = MySQLdb.connect(host="localhost",
                            port=3306,
                            user=username,
