@@ -12,12 +12,12 @@ if __name__ == "__main__":
     db_name = argv[3]
 
     url = 'mysql+mysqldb://\
-            {}:{}@localhost:3306/{}'.format(username, password, db_name)
+{}:{}@localhost:3306/{}'.format(username, password, db_name)
     engine = create_engine(url)
     Session = sessionmaker(bind=engine)
     session = Session()
 
     for state in session.query(State).order_by(State.id).all():
-        print(state.id + ': ' + state.name)
+        print(f"{state.id}: {state.name}")
 
     session.close()
