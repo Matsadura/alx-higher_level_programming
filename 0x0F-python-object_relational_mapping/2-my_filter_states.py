@@ -4,13 +4,15 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
+
     username = argv[1]
     password = argv[2]
     db_name = argv[3]
-    state_name = argv[4]
+    if len(argv) > 4:
+        state_name = argv[4]
+    else:
+        state_name = ''
 
-    if state_name == "'":
-        pass
     conn = MySQLdb.connect(host="localhost",
                            port=3306,
                            user=username,
