@@ -14,6 +14,8 @@ if __name__ == "__main__":
 
     if type(eval(response.text)) is not dict:
         print('Not a valid JSON')
+    elif len(eval(response.text).keys()) != len(eval(response.text).values()):
+        print('Not a valid JSON')
     elif len(eval(response.text)) == 0:
         print('No result')
     else:
