@@ -7,7 +7,7 @@ if __name__ == "__main__":
     with urlopen(req) as res:
         body = res.read()
 
-    print("Body response:\n",
-          "\t- type: {}\n".format(body.__class__),
-          "\t- content: {}\n".format(body),
-          "\t- utf8 content: {}".format(body.decode(encoding='utf-8')))
+    print("Body response:")
+    print("\t- type: {}".format(body.__class__))
+    print("\t- content: {}".format(body))
+    print("\t- utf8 content: {}".format(body.decode(encoding='utf-8')))
