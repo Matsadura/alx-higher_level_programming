@@ -10,4 +10,4 @@ if __name__ == "__main__":
     print(f"Body response:\n",
           f"\t- type: {body.__class__}\n",
           f"\t- content: {body}\n",
-          f"\t- utf8 content: {body.decode()}")
+          f"\t- utf8 content: {body.decode(encoding='utf-8')}")
