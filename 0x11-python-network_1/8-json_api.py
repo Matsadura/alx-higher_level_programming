@@ -12,13 +12,13 @@ if __name__ == "__main__":
         data['q'] = ""
     response = requests.post('http://0.0.0.0:5000/search_user', data=data)
 
-    if type(eval(response.text)) is not dict:
+    try:
+        res = response.json()
+        if len(res) == 0:
+            print('No result')
+        else:
+            id = res.get('id')
+            name = res.get('name')
+            print('[{}] {}'.format(id, name))
+    except JSONDecodeError:
         print('Not a valid JSON')
-    elif len(eval(response.text).keys()) != len(eval(response.text).values()):
-        print('Not a valid JSON')
-    elif len(eval(response.text)) == 0:
-        print('No result')
-    else:
-        id = eval(response.text).get('id')
-        name = eval(response.text).get('name')
-        print('[{}] {}'.format(id, name))
