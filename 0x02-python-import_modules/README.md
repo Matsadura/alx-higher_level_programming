@@ -23,7 +23,6 @@
 
 ---
 
-This summary should provide a clear overview of Python's import and modules concept along with the specified learning objectives. If you need further explanations, examples, or details on any of these topics, feel free to ask!
 | File      | Description |
 | ----------- | ----------- |
 | [0-add.py](./0-add.py) | A program that imports the function ``def add(a, b):`` from the file ``add_0.py`` and prints the result of the addition ``1 + 2 = 3`` |
