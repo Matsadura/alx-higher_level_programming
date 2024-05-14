@@ -1,9 +1,4 @@
-# 0x0F. Python - Object-relational mapping
-Here's a structured summary covering the concept of Object-Relational Mapping (ORM) in Python, along with your specified learning objectives:
-
----
-
-**Python - Object-Relational Mapping (ORM)**
+# 0x0F. Python - Object-Relational Mapping (ORM)
 
 1. **How to connect to a MySQL database from a Python script:**
    Use the `mysql-connector-python` library to connect to a MySQL database from Python:
