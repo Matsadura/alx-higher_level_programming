@@ -1,16 +1,22 @@
 #!/usr/bin/node
 
-const argv = process.argv;
 const request = require('request');
-const url = 'https://swapi-api.alx-tools.com/api/people/18/';
-let myApi = argv[2].split('/');
-myApi = myApi[4];
+const url = process.argv[2];
+const charId = '18';
+let count = 0;
 
 request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
     const bodyJson = JSON.parse(body);
-    console.log(bodyJson[myApi].length);
+    bodyJson.results.forEach((film) => {
+      film.characters.forEach((Actor) => {
+        if (Actor.includes(charId)) {
+          count++;
+        }
+      });
+    });
   }
+  console.log(count);
 });
